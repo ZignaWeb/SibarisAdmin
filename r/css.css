@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Bold';
+    src: url('f/pfdindisplaypro-bold-webfont.eot');
+    src: url('f/pfdindisplaypro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('f/pfdindisplaypro-bold-webfont.woff') format('woff'),
+         url('f/pfdindisplaypro-bold-webfont.ttf') format('truetype'),
+         url('f/pfdindisplaypro-bold-webfont.svg#QuicksandBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Light';
+    src: url('f/pfdindisplaypro-light-webfont.eot');
+    src: url('f/pfdindisplaypro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('f/pfdindisplaypro-light-webfont.woff') format('woff'),
+         url('f/pfdindisplaypro-light-webfont.ttf') format('truetype'),
+         url('f/pfdindisplaypro-light-webfont.svg#QuicksandBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Medium';
+    src: url('f/pfdindisplaypro-medium-webfont.eot');
+    src: url('f/pfdindisplaypro-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('f/pfdindisplaypro-medium-webfont.woff') format('woff'),
+         url('f/pfdindisplaypro-medium-webfont.ttf') format('truetype'),
+         url('f/pfdindisplaypro-medium-webfont.svg#QuicksandBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html {height:100%; font-family:"Light",Georgia, "Times New Roman", Times, serif}
+body, ol, li, h1, h2, p { margin:0px; padding:0px; list-style:none;}
+a { color:inherit; text-decoration:none;}
+
+/* wrap */
+
+body[data-role="page"]{padding-bottom:75px;}
+#pull { display:block;clear:both; height:80px;}
+
+/* login page */
+.signup { display:block; overflow:auto; clear:both; text-align:center; color:#FFF; text-decoration:none; padding:10px; margin-top:20px;}
+#login, 
+#signup, 
+#reservas {background:url("fondo_vv.png");color:#9B875F; display:block;}
+#login img, 
+#signup img,
+#reservas img.title{width: 60%; max-width:200px; height:auto; display:block; margin:50px auto 0px auto; clear:both;}
+form { padding: 20px; text-align:center; display:block; clear:both;}
+#cp form input, #cp form span { background:#FFF;} 
+#cp form input[type="submit"] { background:#F90; }
+form input,
+form textarea,
+form span,input[type="radio"]+label { background-color:#FFE1C3; display:block; float:left; width:90%; padding:5%; border:none; margin:2px 0px; line-height:18px; font-size:13px; font-family:"Light",Georgia, "Times New Roman", Times, serif;border:none; position:relative;}
+.msje {display:block; float:left; width:100%; padding:2%; border:none; margin:2px 0px; line-height:18px; font-size:13px; font-family:"Light",Georgia, "Times New Roman", Times, serif;border:none; color:#FFF}
+form input[type="submit"] { background:#F90; width:100%; color:#FFF; font-size:16px;}
+form span.tel { width:15%;}
+form span.tel img { margin:0px !important; height:18px !important; width:auto !important}
+form input#area { width:10%;}
+form input#tel { width:45%;}
+form span.nac { width:21%; text-align:left;}
+form input[name="dia"], form input[name="mes"], form input[name="year"] { width:23%; padding:5% 0px; text-align:center;}
+form span.comensales { width:30%;} 
+form input#comensales { width:50%;}
+div#response { background-color:#FFF; border:1px solid #CCC; padding:1%; margin:1% 7%;}
+.formwrap {background-color:#FFE1C3;height:auto; padding:0px; margin:0px; width:90%; margin-bottom:2px; padding:0 5% 5% 5%;}
+span.horario { margin-bottom:0px; position:relative;}
+input[type="radio"] { display:none}
+input[type="radio"]+label { display:block; float:left; background:#FFF; width:12%; margin-top:0px; margin:0.3%; padding:2%;}
+input[type="radio"]:checked+label{ font-weight: bold; background-color:#FF9923; color: #FFF} 
+
+form input[name="fec"]{background:url(calendariob.png) #FFE1C3 no-repeat;}
+form input[name="hor"]{background: url(relojb.png) #FFE1C3 no-repeat;}
+form input[name="fec"],form input[name="hor"] { width:90%;  background-position: 20px center;  text-indent:50px; text-align:center}
+/* club */
+#club {background:#FF9923 url(title_back.png) repeat-x top; background-position:0px 15px; color:#9B875F; padding:10px;}
+#club #top {text-align:left; padding-left:20px; overflow:auto; height:70px;}
+#club #top img#u_foto { display:block; float:left;}
+#club #top .u_info { display:block; float:left; padding:0px 0px 0pxx 20px;}
+
+#club .wrap { background-color:#FFE1C3; padding:10px;}
+#club .wrap h1 { text-transform:uppercase; font-size:20px;}
+#club .wrap p { margin-top:20px;}
+#club .wrap ol { display:block; overflow:auto; margin-top:20px;}
+#club .wrap ol li:first-child { border-top:1px solid #FFF;}
+#club .wrap ol li { border-bottom:1px solid #FFF; background:url(regalo.png) no-repeat; background-position:0px 12px; padding:10px 0px 10px 30px;}
+
+#club ol#btn_cuenta { display:block; clear:both; padding-top:20px;}
+#club ol#btn_cuenta li { display:block; float:left; width:50%; text-align:center;}
+#club ol#btn_cuenta li a {}
+#club ol#btn_cuenta li a img { width:80%; height:auto;}
+
+/* CP */
+body#cp  {background:#FFE1C3;color:#9B875F; width:100%; height:auto; padding:10px 0 100px 0;}
+#top {display:block; overflow:auto;}
+#top img#u_foto {width: 30%; margin:0px 0px 0px 10px; max-width:100px; height:auto; display:block; float:left}
+#top .u_info { width:65%; display:block; float:left; margin-top:20px;}
+#top .u_info .nombre,#top .u_info .secLine, #top .u_info a.link  { padding:0px 0px 0px 20px; display:block; overflow:auto;}
+#top .u_info .nombre { font-family:'medium',Arial, Helvetica, sans-serif;}
+#top .u_info .secLine, #top .u_info a.link { font-size:12px; line-height:20px;}
+#top .u_info a.link { background:url(../r/h_conf_tiny.png) left top no-repeat; background-position:20px 0px; padding-left:45px; text-transform:uppercase; color:inherit; text-decoration:none; line-height:20px; display:block; height:20px; overflow:hidden;}
+
+#cp #btn_cuenta { clear:both; display:block; margin:30px 0 0 0; padding:0; text-align:center; width: inherit;}
+#cp #btn_cuenta li { display:inline-block;width:45%; margin:0; padding:0;}
+@media only screen 
+and (min-width : 480px) {
+	#cp #btn_cuenta li.btnItm { display:inline-block; width:33%;}
+}
+#cp #btn_cuenta li a {}
+#cp #btn_cuenta li a img { display:block; max-width:200px; width:80%; height:auto; margin:0px auto}
+#cp #btn_cuenta li:last-child a img { text-align:right;}
+
+/* sugerencias  y recetas */
+body#recetas     { background:url(title_back.png) repeat-x top #D3DB78; background-position:0px 15px;}
+body#sugerencias, body#recetas {
+	display:block;	height:auto;
+	padding:0px 5px 100px 5px;
+	color:#9B875F;
+}
+#recetas #top { text-align:left; padding-left:20px; padding-top:10px; overflow:auto; height:60px; overflow:hidden;}
+#recetas #top img { height:40px; width:auto;}
+
+body#sugerencias { background:url(title_back.png) repeat-x top #FF9923; background-position:0px 45px;}
+#sugerencias #top { text-align:left; padding-left:20px; padding-top:10px; overflow:auto; height:90px; overflow:hidden;}
+#sugerencias #top img { height:70px; width:auto;}
+
+#recetas img.shadow, 
+#sugerencias img.shadow { display:block;}
+
+#sugerencias div.itm, #recetas div.itm { background:#FFF; padding:5px; margin:20px auto 0px auto; max-width:500px; display:block;}
+#sugerencias div.itm h2, #sugerencias div.itm p, #recetas div.itm h2, #recetas div.itm p { padding:5px; display:block;}
+#sugerencias div.itm h2, #recetas div.itm h2 { font-size:14px;}
+#sugerencias div.itm p, #recetas div.itm p { font-size:14px;}
+#sugerencias img.thumb, #recetas img.thumb { width:100%; height:auto; max-width:500px; margin:auto; display:block}
+
+/* botones */
+ol#botoneraPrincipal {
+	position:fixed; bottom:0px; right:0px; left:0px;
+	height:66px;
+}
+ol#botoneraPrincipal li {display: block; float:left; width:33.33%; overflow:auto; height:inherit; text-align:center;background: url(buttonBack2.png) #B59F90}
+ol#botoneraPrincipal li {box-shadow: -1px 0 0 0 rgba(149, 135, 124, 0.8), -1px 0 0 0 rgba(149, 135, 124, 0.8);}
+ol#botoneraPrincipal li:nth-child(2){ }
+ol#botoneraPrincipal li img { height:50px; width:auto; margin-top:8px;}

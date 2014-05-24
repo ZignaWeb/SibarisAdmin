@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+    "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sibaris</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<script type="text/javascript" src="r/jquerry.js"></script>
+<script type="text/javascript" src="r/jQui.js"></script>
+<script type="text/javascript" src="http://restosibaris.com.ar/app/data/offdays.php"></script>
+<script type="text/javascript" src="r/local.js"></script>
+<link href="r/css.css" rel="stylesheet" type="text/css" />
+<link href="r/jQui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="reservas" data-role="page">
+    <img class="title" src="r/reservas.png" alt="Modo Sibaris" />
+    <form id="reservaForm" action="http://restosibaris.com.ar/app/data/reserva_nueva.php" method="post">
+  <p class="msje">Reserva sujeta a confirmaci&oacute;n</p>
+        <input type="hidden" name="ide" id="ide" value="" placeholder="ide"/>
+      <input type="text" name="nom" id="nombre" value="" placeholder="Nombre y apellido"/>
+        <span class="tel">Tel&eacute;fono</span>
+    <input type="text" name="are" id="area" value="" placeholder="Area"/>
+      <input type="text" name="tel" id="tel" value="" placeholder="Tel&eacute;fono"/>
+        <span class="comensales">Reserva para</span>
+        <input type="number" name="nro" id="comensales" value="" placeholder="N&uacute;mero de personas" />
+        <input class="fecha" type="text" name="fec" id="datepicker" placeholder="mes/dia/a&ntilde;o" />
+        <span class="horario">Almuerzo</span>
+        <span class="formwrap">
+            <input type="radio" name="hor" value="12:00" id="h120" /><label for="h120">12:00</label>
+            <input type="radio" name="hor" value="12:30" id="h123" /><label for="h123">12:30</label>
+            <input type="radio" name="hor" value="13:00" id="h130" /><label for="h130">13:00</label>
+            <input type="radio" name="hor" value="13:30" id="h133" /><label for="h133">13:30</label>
+            <input type="radio" name="hor" value="14:00" id="h140" /><label for="h140">14:00</label>
+            <input type="radio" name="hor" value="14:30" id="h143" /><label for="h143">14:30</label>
+        </span>
+        <span class="horario">Cena</span>
+        <span class="formwrap">
+            <input type="radio" name="hor" value="20:30" id="h203" /><label for="h203">20:30</label>
+            <input type="radio" name="hor" value="21:00" id="h210" /><label for="h210">21:00</label>
+            <input type="radio" name="hor" value="21:30" id="h213" /><label for="h213">21:30</label>
+            <input type="radio" name="hor" value="22:00" id="h220" /><label for="h220">22:00</label>
+            <input type="radio" name="hor" value="22:30" id="h223" /><label for="h223">22:30</label>
+        </span>
+  <textarea name="prf" placeholder="Preferencias"></textarea>
+      <input type="submit" value="Hacer reserva" />
+        </form>
+    </form>
+
+    <ol id="botoneraPrincipal">
+        <li><a href="reservas.html"><img src="r/reserva.png" /></a></li>
+        <li id="modoSibaris"><a href="#"><img src="r/ms.png" /></a></li>
+        <li><a href="cp.html"><img src="r/cuenta.png" /></a></li>
+    </ol>
+
+    <div id="pull">&nbsp;</div>
+    <script type="text/javascript">
+
+	var array = new Array();
+	$("#datepicker").datepicker({
+		minDate: -1,
+		maxDate: 120,
+		beforeShowDay: nationalDays
+	});
+	
+	$(document).ready(function(){
+		
+		
+		// add user
+		var u = ((location.search).replace("?u=","")).replace(/%20/g," ");
+		var ud=u.split("|");
+		$("#ide").val(ud[0]);
+		
+		// mostrar reservas	  
+		// $.get("http://restosibaris.com.ar/app/data/reserva_lista.php", { id:ud[0] }, function(resultado) {$("#reservasList").html(resultado);});
+		
+		// fill form
+		var url ="http://restosibaris.com.ar/app/data/getUserInfo.php",
+			datos = { id:ud[0] };
+		$.get(url, datos, function(resultado){
+			info=resultado.split("|");
+			$("#nombre").val(info[0]);
+			$("#area").val(info[1]);
+			$("#tel").val(info[2]);
+		});
+		
+		// form Submit
+		$("#reservaForm").submit(function(event) {
+			event.preventDefault();
+			var url = $(this).attr('action');
+			var datos = $(this).serialize();
+		  
+			$.get(url, datos, function(resultado) {
+				alert(resultado);
+				window.location.assign("cp.html?u="+ud[0]+"|"+ud[1]);
+			});
+		});
+		
+	});
+	</script>
+</body>
+</html>

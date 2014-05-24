@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+    "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sibaris</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link href="r/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="r/jquerry.js"></script>
+<script type="text/javascript" src="r/local.js"></script>
+</head>
+
+<body data-role="page" id="club">
+    	<div id="top">
+        	<img src="r/clubSibaris.png" />
+        </div>
+        <div class="wrap">
+            <h1>Bienvenido al club</h1>
+            <p>Sibaris te recive con una sorpresa especial. Disfrutar m&aacute;s. Eso es Modo Sibaris.</p>
+            <ol id="premios">
+            </ol>
+        </div>
+        <ol id="botoneraPrincipal">
+        	<li><a href="reservas.html"><img src="r/reserva.png" /></a></li>
+        <li id="modoSibaris"><a href="#"><img src="r/ms.png" /></a></li>
+        <li><a href="cp.html"><img src="r/cuenta.png" /></a></li>
+        </ol>
+<script type="text/javascript">
+$(document).ready(function(){ 
+	var printName = ((location.search).replace("?u=","")).replace(/%20/g," ").split("|");
+	$.get("http://restosibaris.com.ar/app/data/club.php",{u: gup("u"), ide:printName[0]}, function(data){ 
+	  $(data).appendTo("#premios");
+	}).fail(function() { alert("No se pudo cargar el contenido. Es necesario una conección a Internet."); });
+});
+</script>
+</body>
+</html>

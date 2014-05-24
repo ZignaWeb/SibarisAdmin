@@ -1,0 +1,335 @@
+@charset "utf-8";
+/* tipografias */
+@font-face {
+    font-family: 'Bold';
+    src: url('../r/f/pfdindisplaypro-bold-webfont.eot');
+    src: url('../r/f/pfdindisplaypro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../r/f/pfdindisplaypro-bold-webfont.woff') format('woff'),
+         url('../r/f/pfdindisplaypro-bold-webfont.ttf') format('truetype'),
+         url('../r/f/pfdindisplaypro-bold-webfont.svg#QuicksandBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Light';
+    src: url('../r/f/pfdindisplaypro-light-webfont.eot');
+    src: url('../r/f/pfdindisplaypro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../r/f/pfdindisplaypro-light-webfont.woff') format('woff'),
+         url('../r/f/pfdindisplaypro-light-webfont.ttf') format('truetype'),
+         url('../r/f/pfdindisplaypro-light-webfont.svg#QuicksandBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Medium';
+    src: url('../r/f/pfdindisplaypro-medium-webfont.eot');
+    src: url('../r/f/pfdindisplaypro-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../r/f/pfdindisplaypro-medium-webfont.woff') format('woff'),
+         url('../r/f/pfdindisplaypro-medium-webfont.ttf') format('truetype'),
+         url('../r/f/pfdindisplaypro-medium-webfont.svg#QuicksandBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, p { font-weight:normal; margin:0px; padding:0px;}
+img { border:none; margin:0px; padding:0px;}
+div {overflow:auto}
+a { text-decoration:none; color:inherit;}
+
+body { background:url(fondo_vv.png); padding:20px; font-family:"Light",Arial, Helvetica, sans-serif;}
+
+.margenes {}
+.cuadro { background:#EDD6BF; border:3px solid #D78C43; padding:5px;}
+
+/* header */
+#header { margin:30px 0px 20px 0px; overflow:hidden; height:40px;}
+#header img#logo { height:40px; width:auto; display:block; float:left;}
+#header h1 { display:block; float:left; height:40px; line-height:40px; color:#FFF; text-transform:uppercase; font-size:25px; margin-left:30px;font-family:"Light",Arial, Helvetica, sans-serif;}
+
+/* menu */
+ol#menu, ol#menu li { list-style:none; margin:0px; padding:0px;}
+ol#menu { position:absolute; top:0px; right:50px;}
+ol#menu li { position:relative; display:inline-block; margin-left:5px; border-top:5px solid #D78C43; padding:3px; color:#FFF; }
+ol#menu li a { text-transform:uppercase;}
+
+
+
+/* login */
+#login {  width:100%; height:100%}
+
+/* home */
+.col2,
+.col1{ display:block; float:left;}
+.col2{ width:64%; padding:0.5%;}
+.col1{ width:32%; padding:0.5%;}
+
+.main_wide{ margin-bottom:10px;}
+.main_wide h2,
+.main_wide #fechaAhora,
+.main_wide #horaAhora{ display:inline-block; margin-right:20px; height:20px; line-height:20px;padding-left:30px;}
+.main_wide h2 { font-size:20px;}
+.main_wide #fechaAhora{ background:url(../../r/calendariob.png) left no-repeat; }
+.main_wide #horaAhora{ background: url(../../r/relojb.png) left no-repeat;}
+
+/* reserva lista */
+.listaWide { width:100%; font-size:12px;}
+.listaWide tr {}
+.listaWide tr td:nth-child(5){}
+.listaWide td { padding:10px 10px 20px 10px;}
+.avatarHold,
+.avatarHold img,
+.nombre,
+.resPara,
+.beneficio,
+.hora { height:60px; text-align:center;}
+.benLink { padding:0px 3px; color:#D78C43}
+.nombre { text-align:left;}
+.nombre span {color:#666; display:block; clear:both;}
+.avatar { height:inherit; width:auto;}
+.hora { width:100px;}
+.hora span { }
+.avatarHold { width:60px;}
+.resPara span, .beneficio span { color:#D78C43; text-transform:uppercase; font-size:10px;}
+.estado0{}
+.estado1 a.cuadro {background: #FFF}
+.estado1 a.cuadro span {}
+.estado2 a.cuadro {background: url(done.png) no-repeat center #D78C43}
+.estado2 a.cuadro span { visibility:hidden;}
+
+p.ag_field_line { display:block; height:auto; overflow:auto;}
+.ag_field_list { display:block; float:left; padding-right:10px; text-transform:capitalize;}
+.editBtns { width:75px;}
+
+#paginas { text-align:center}
+#paginas a { display:inline-block; padding:5px; border:1px solid #D78C43; margin-right:5px; font-size:12px; font-weight:bold; background:#FFF;}
+
+/* menuSec */
+.menuSec { padding:5px; overflow:auto; display:block;}
+.menuSec a { padding:5px 7px; background:#D78C43; color:#FFF; display:inline-block; font-size:12px; text-transform:uppercase; }
+
+/* forms */
+form { text-align:center; overflow:visible}
+form label { display:block; margin-top:10px}
+form label span { display:block;}
+form label input,
+form label textarea { border:2px solid #D78C43; padding:10px; margin:0px; width:200px;}
+form input[type="submit"] { background-color: #D78C43; color:#FFF;width:224px;border:none; padding:10px; margin:10px 0px;}
+
+/* form */
+form#adminForm { padding:10px; text-align:left;}
+form#adminForm p { padding-top:20px; font-size:12px; text-transform:uppercase; font-weight:bold; display:block; clear:both;}
+form#adminForm input, form#adminForm textarea { width:98%; display:block; clear:both; margin:5px 0px; padding:1%;}
+form#adminForm .optGroup label,form#adminForm .optGroup input { width:auto; display:inline-block; padding-right:10px; font-size:12px;}
+form#adminForm input[type="submit"] { background-color: #D78C43; color:#FFF; border:none; padding:inherit; margin-top:50px;}
+.rtfbox {overflow:hidden;}
+ol.rtf { margin-top:10px}
+ol.rtf, ol.rtf li { list-style:none; margin:0px; padding:0px;}
+ol.rtf li {display:inline-block;}
+ol.rtf li a { padding:3px 5px; background:#FFF; font-size:12px; text-transform:uppercase;}
+
+.asterisco { color:#D78C43; font-weight:bold;}
+.force { box-shadow: 0px 0px 5px #D78C43; border:1px solid #D78C43}
+input.force:focus, textarea.force:focus {border:1px solid #D78C43;}
+input:focus, textarea:focus {box-shadow: 0px 0px 5px #FFCC00; border:2px solid #D78C43;}
+.force.optGroup { padding:0 0 10px 10px!important;}
+
+/* Form Filter */
+form#formFilter { padding:0px; margin:0px; text-align:left; display:block; overflow:visible; clear:both;}
+form#formFilter select {}
+form#formFilter select,
+form#formFilter > input { padding:1%; width:30.3%; display:block; float:left; margin:1%;}
+form#formFilter input[type="submit"] {}
+
+#results { border-bottom:1px solid #D78C43;  border-top:1px solid #D78C43; padding:1%; font-size:12px; color:#D78C43; text-align:right; display:block; clear:both;}
+#results span { color:#000}
+
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { float: left; clear:left; padding: 0 0 0 5px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 45%; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+.ui-timepicker-rtl{ direction: rtl; }
+.ui-timepicker-rtl dl { text-align: right; padding: 0 5px 0 0; }
+.ui-timepicker-rtl dl dt{ float: right; clear: right; }
+.ui-timepicker-rtl dl dd { margin: 0 45% 10px 10px; }
+
+/* ESTADÍSTICAS*/
+#estadisticas.cuadro { border:none; background-color: #FC6; padding:3%;}
+#estadisticas { display:block; overflow:auto;}
+#estadisticas h1 { display:block; clear:both; color:#FFF; font-weight:normal;}
+#estadisticas .wrap { background-color:#FF9; overflow:auto; padding:4%;}
+#estadisticas .wrap .col { display:block; float:left; width:46%; padding:0 2%;}
+#estadisticas .wrap .col:nth-child(1){box-shadow: 2px 0 0 0 #FC6}
+#estadisticas .wrap .col:nth-child(2){box-shadow: -2px 0 0 0 #FC6; left:2px; position:relative;}
+#estadisticas .wrap .col h2 { font-size:14px; font-weight:normal; border-bottom:2px solid #FC6; padding-top:20px; line-height:30px; margin-bottom:10px;}
+#estadisticas .wrap .col p { padding:5px 0; font-size:13px;}
+#estadisticas .wrap .col p span { color: #F93; font-weight:bold;}
+#estadisticas .wrap .col .bar {overflow:hidden; background-color:#FFF; padding:5px;}
+#estadisticas .wrap .col .bar span {display:inline-block;overflow:visible; text-align:center; font-size:10px; text-transform:uppercase; line-height:25px; min-height:5px;}
+
+
+/* Calendario */
+.calendar-title-years, .calendar-title-meses { line-height:30px; display:block; clear:both; text-align:center; overflow:auto;}
+.calendar-title-meses a,
+.calendar-title-years a { background:#FFF;display:block; float:left; margin:0.5%; overflow:auto; font-size:14px;}
+.calendar-title-meses a { width:7.33%; }
+.calendar-title-years a { width:32.33%;}
+.calendar-actual { font-weight:bold; background:#D78C43 !important; color:#FFF}
+table.calendar { border-left:1px solid #999; margin-top:20px;}
+tr.calendar-row	{}
+td.calendar-day	{ min-height:80px; font-size:11px; position:relative; background: #9C0} * html div.calendar-day { height:80px; }
+td.calendar-day:hover	{ background:#C00; cursor:pointer }
+
+td.calendar-day-np	{ background:#eee; min-height:80px; } * html div.calendar-day-np { height:80px; }
+td.calendar-day-head { background:#eee; font-weight:bold; text-align:center; width:120px; padding:5px; border-bottom:1px solid #999; border-top:1px solid #999; border-right:1px solid #999; }
+a.day-number { 
+	font-weight:bold; text-align:center;
+	display:block;
+	}
+/* shared */
+td.calendar-day, td.calendar-day-np { width:120px; padding:5px; border-bottom:1px solid #999; border-right:1px solid #999; box-shadow:inset 0 50px 0 0px #FFF; line-height:50px;}
+.diaL.off,.diaR.off {background: #C00 !important;}
+.shadow {box-shadow:inset 0 50px 0 0px #D78C43 !important; color:#FFF}
+/*Cambios calendar*/
+td.calendar-day:hover 	{ box-shadow: inset 0 50px 0 0px #C00 !important }
+td.calendar-day.off:hover{box-shadow: inset 0 50px 0 0px #9C0 !important}
+
+.diaL{
+	height: 10px;
+	background: #9C0;
+	width: 50%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+/*.diaL:hover{ 
+	background: #C00;
+}
+.diaR:hover{ 
+	background: #C00;
+}*/
+.diaR{
+	height: 10px;
+	background: #9C0;
+	width: 50%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.calDaysOff{
+		z-index:5000;
+		display: inline-block;
+		position: absolute;
+		width: 920px;
+		height: 365px;
+		background-color: rgba(157, 137, 97, .9);
+		box-shadow: 10px 10px 15px #888888;
+		display:none;
+		
+}
+.calDaysOff div {
+	
+	position: relative;
+	width: 100px;
+	background:#EDD6BF;
+	height: 50%;
+	top: 25%;
+	left: 44%;
+}
+.calDaysOff div a {
+	text-align:right;
+	display:block
+	
+	}
+.calDaysOff div p {
+	text-align:center
+	}
+.calDaysOff form {
+	text-align:left;
+}
+.calDaysOff form input[type="submit"]{
+		width:90%;
+		margin:10PX 5%;
+	}
+.calDaysOff form input[type="submit"]:hover{
+		cursor:pointer
+	}
+.rxu{
+	height:auto;
+	width:100%;
+}
+.rxu p{
+	font-weight: bold;
+}
+.rxu:nth-of-type(even){
+	background:#ffff80;
+}
+
+.rxu * :not(h3){
+	color:#F93
+	
+}
+.rxu h3{
+	display:inline
+}
+.rxu > div:nth-of-type(odd){
+	width:70%;
+	display:inline-block;
+	
+	}
+.rxu > div:nth-of-type(even){
+	width:28%;
+	display:inline-block;
+	height:130px;
+	}
+.circle {
+   width: 100px;
+    height: 100px;
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+    background: #D78C43;
+		margin-top:15px
+}
+
+.circle-text {
+    width:100%;
+}
+.circle-text:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+    background: #D78C43; 
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
+.circle-text div {
+    float:left;
+    width:100%;
+    padding-top:50%;
+    margin-top:-0.5em;
+    text-align:center;
+    color:white;
+}
+@media only screen and (max-width: 1000px) { 
+.rxu > div:nth-of-type(odd){
+	width:100%;
+	
+	}
+.rxu > div:nth-of-type(even){
+	width:100%;
+	}
+
+
+}
+/*-webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);*/
