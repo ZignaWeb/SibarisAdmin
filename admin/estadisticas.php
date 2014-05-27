@@ -115,47 +115,16 @@ include("../data/main.php");
                 <h2>Sexo</h2>
                 <? printbars($hmn);?>
                 <h2>Reservas por Usuario</h2>
+                <div id="dias">
+                	<form   action="reservasPorUsuario.php" method="get">
+										<input type="submit" value="Mostrar ultimos" />
+                  	<input name="dias"  type="number"  placeholder="Dias" />
+                   </form>
+                   
+                 </div>
                 <div class="content">
                 	
-                <? 
-					$rxut="
-					SELECT usuario.`nombre`, usuario.`email`, usuario.`area`, usuario.`telefono`,usuario.`cumple`,usuario.`lastlogin` ,COUNT( * ) AS rxu
-					FROM reservas, usuario
-					WHERE estado =2
-					AND usuario.id = reservas.userid
-					AND reservas.creada >= DATE_SUB( CURDATE( ) , INTERVAL 30 
-					DAY ) 
-					GROUP BY userid
-					HAVING rxu >=1
-					ORDER BY rxu DESC
-					";
-					$rxuq=mysql_query($rxut);
-					
-					while($val=mysql_fetch_assoc($rxuq)){
-					$c=	date("Y-n-j",strtotime($val["cumple"]));
-					$ll=date("Y-n-j H:i:s",strtotime($val["lastlogin"]));
-						echo'
-						
-						<div class="rxu">
-							<div>
-								<p>Nombre: '.$val["nombre"].'</p>
-								<p>Email: '.$val["email"].'</p>
-								<p>Tel.: ('.$val["area"].') '.$val["telefono"].'</p>
-								<p>Cumpleaños: '.$c.'</p>
-								<p>Ultimo login: '.$ll.'</p>
-							</div>
-							<div>
-								<div class="circle">
-									<div class="circle-text">
-										<div>'.$val["rxu"].'</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						';
-					}
-					?>
+                
 					                </div>
 					                
 					            </div>
@@ -166,5 +135,26 @@ include("../data/main.php");
 		include ('login.php');
 	}
 	?>
+  <script type="text/javascript" >
+	
+		$(document).ready(function(){
+			$('.content').load('reservasPorUsuario.php');
+			});
+			
+		$("#dias form input[type='submit']").click(function(event){
+			event.preventDefault();
+			var dias=document.querySelector('[name="dias"]').value;
+			 $('.content').load('reservasPorUsuario.php?dias='+dias);
+			
+			
+		});
+		
+	
+	
+
+
+
+
+</script> 
 </body>
 </html>
