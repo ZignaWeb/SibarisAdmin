@@ -20,7 +20,7 @@ include("../data/main.php");
         <h1>Estadísticas</h1>
     </div>
 	<?
-	if(session_is_registered(myusername) && session_is_registered(mypermisos)){
+	if(isset($_SESSION[myusername]) && isset($_SESSION[mypermisos])){
 		include ("menu.php");
 
 		// numero de usuarios

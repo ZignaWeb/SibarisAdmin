@@ -22,7 +22,7 @@ include("../data/main.php");
         <h1>Administración</h1></a>
     </div>
 	<?
-	if(session_is_registered(myusername) && session_is_registered(mypermisos)){
+	if(isset($_SESSION[myusername]) && isset($_SESSION[mypermisos])){
 		$embed=1;
 		include ("menu.php");
 		if ($_GET["a"] && $_GET["q"]) {
