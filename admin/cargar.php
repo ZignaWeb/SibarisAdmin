@@ -78,7 +78,10 @@
 			
 			if ($postv!="" && $val["val"]!="file") {
 				if ($i>1){$q.=",";}
-				$q.=" `".$val["db"]."`='".$postv."'";
+			/*$lacento=array("<",">","&","¡","¿","®","©","€","á","é","í","ó","ú","ñ","ü","Á","É","Í","Ó","Ú","Ñ","Ü");
+			$cespeciales=array("&lt","&gt","&amp","&iexcl","&iquest","&reg","&copy","&euro","&aacute","&eacute","&iacute","&oacute","&uacute","&ntilde","&uuml","&Aacute","&Eacute","&Iacute","&Oacute","&Uacute","&Ntilde","&Uuml");
+			$clean=str_replace($lacento,$cespeciales,$postv);*/
+				$q.=" `".$val["db"]."`='".$postv."'";//8
 			}elseif($val["val"]=="file"){
 				array_push($imgs,$val["db"]);
 			}elseif($postv=="" && $val["force"]==1){

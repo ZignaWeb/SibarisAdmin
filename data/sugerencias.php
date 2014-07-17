@@ -15,7 +15,7 @@ if ($qn>0){
 	for($i=0;$i<$qn;$i++) {
 		$ud=mysql_fetch_assoc($q);
 		foreach($ud as $key => $val){
-			$ud[$key]=htmlentities(utf8_decode($val));
+			$ud[$key]=$val;
 		}
 		
 		echo '<div class="itm">

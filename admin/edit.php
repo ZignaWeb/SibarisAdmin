@@ -66,7 +66,6 @@
 		foreach ($secciones[$_GET["q"]]["c"] as $val) {
 			$i++;
 			$postv = $_POST[$val["db"]];
-			
 			if ($postv!="" && $val["val"]!="file") {
 				if ($i>1){$q.=",";}
 				$q.=" `".$val["db"]."`='".$postv."'";

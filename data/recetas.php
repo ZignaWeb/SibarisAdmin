@@ -5,7 +5,7 @@ $n=mysql_num_rows($q);
 for ($i=0;$i<$n;$i++){
 	$ud=mysql_fetch_assoc($q);
 	foreach($ud as $key => $val){
-		$ud[$key]=htmlentities(utf8_decode($val));
+		$ud[$key]=$val;
 	}
 	echo '<div class="itm">
             <a href="receta.html?ide='.$ud["id"].'"><img src="http://restosibaris.com.ar/app/data/uploads/portrait/'.$ud["img"].'" class="thumb" /></a>
